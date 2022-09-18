@@ -17,7 +17,9 @@
                         <li><a href="#"><i class="fa fa-vk"></i></a></li>
 
                     </ul>
-                    <div class="dropdown">
+
+
+                    {{-- <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="about-us" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <span>Langue</span>
                         <span class="caret"></span>
@@ -26,12 +28,11 @@
                             <li><a href="#">French</a></li>
                             <li><a href="#">English</a></li>
                         </ul>
-                    </div>
-                    
-                    <select class="selectpicker" data-width="fit">
+                    </div> --}}
+                    {{-- <select class="selectpicker" data-width="fit">
                         <option data-content='<span class="flag-icon flag-icon-us"></span> English'>English</option>
                         <option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>Español</option>
-                    </select>
+                    </select> --}}
                 </div>
             </div>
             <div class="clearfix"> </div>
@@ -68,6 +69,13 @@
                                 </li>
                                 <li><a class="{{$active4 ?? ''}}" href="{{route('posts')}}">Blog</a></li>
                                 <li><a class="list-border1 {{$active5 ?? ''}}" href="{{route('contact')}}">Contact</a></li>
+
+                                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom {{$active3 ?? ''}}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Langue<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="hvr-bounce-to-bottom" href="{{route('gallery.images')}}">Francais</a></li>
+                                        <li><a class="hvr-bounce-to-bottom" href="{{route('gallery.videos')}}">Englais</a></li>
+                                    </ul>
+                                </li>
                             </ul>
                             <div class="clearfix"> </div>
                         </div>

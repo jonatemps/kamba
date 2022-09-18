@@ -13,6 +13,11 @@
 <!-- blog -->
 <div class="blog">
     <div class="container">
+        @if(Session::has('success'))
+            <div class="alert alert-success">
+                {{ Session::get('success') }}
+            </div>
+        @endif
         <div class="agile-blog-grids">
             <div class="col-md-8 agile-blog-grid-left">
 
@@ -29,7 +34,7 @@
                         <div class="blog-left-right">
                             <div class="blog-left-right-top">
                                 <h4><a href="{{route('post',$post->id)}}">{{$post->title}}</a></h4>
-                                <p>Posté Par <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="#">Comments (10)</a></p>
+                                <p>Posté Par <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="#">Commentaires ({{$post->comments->count()}})</a></p>
                             </div>
                             <div class="blog-left-right-bottom">
                                 <p>{!! nl2br(substr($post->content,0,150)) !!}</p>
@@ -43,7 +48,7 @@
 
                @endforeach
 
-                <nav>
+                {{-- <nav>
                     <ul class="pagination">
                         <li>
                             <a href="#" aria-label="Previous">
@@ -60,19 +65,22 @@
                                 <span aria-hidden="true">»</span>
                             </a>
                         </li>
+
+                        {!! $posts->links() !!}
                     </ul>
-                </nav>
+                </nav> --}}
+                <div class="d-flex justify-content-center">
+                    {!! $posts->links() !!}
+                </div>
             </div>
             <div class="col-md-4 agile-blog-grid-right">
                 <div class="categories">
-                    <h3>Categories</h3>
+                    <h3>Récents</h3>
                     <ul>
-                        <li><a href="#">Phasellus sem leo, interdum quis risus</a></li>
-                        <li><a href="#">Nullam egestas nisi id malesuada aliquet </a></li>
-                        <li><a href="#"> Donec condimentum purus urna venenatis</a></li>
-                        <li><a href="#">Ut congue, nisl id tincidunt lobor mollis</a></li>
-                        <li><a href="#">Cum sociis natoque penatibus et magnis</a></li>
-                        <li><a href="#">Suspendisse nec magna id ex pretium</a></li>
+
+                        @foreach ($posts as $post)
+                            <li><a href="#">{{$post->title}}</a></li>
+                        @endforeach
                     </ul>
                 </div>
                 <div class="categories">

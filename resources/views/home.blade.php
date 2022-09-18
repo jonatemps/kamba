@@ -10,6 +10,12 @@
 <meta name="keywords" content="Harvest Life Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link
+        href="{{asset('logo.jpg')}}"
+        id="favicon"
+        rel="icon"
+    >
 <!-- bootstrap-css -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
@@ -187,6 +193,11 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	<!-- services -->
 	<div class="services">
 		<div class="container">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
 			<div class="agileits-services-grids">
 				<div class="col-md-4 agileinfo-services-left">
 					<h3>Nos <span>Activités</span></h3>
@@ -205,7 +216,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 					</div>
 					<div class="col-md-6 w3-agileits-services-grid agile-services1">
 						<i class="fa fa-font" aria-hidden="true"></i>
-						<h4>Réduction d'analphabetisation</h4>
+						<h4>Réduction d'analphabétisation</h4>
 						<p>Encourager l'apprentissage de la lecture. Via l'enseignement des bases de lecture et d'écriture, cette méthode permet d'inclure également l'apprentissage social et culturel.</p>
 					</div>
 					<div class="col-md-6 w3-agileits-services-grid">
@@ -290,6 +301,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 				<div class="col-md-3 w3-agile-footer-grid">
 					<h3>Newsletter</h3>
 					<form action="" method="post">
+                        @csrf
 						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Entrez votre adresse email" required="">
 						<input type="submit" value="Souscrir">
 					</form>

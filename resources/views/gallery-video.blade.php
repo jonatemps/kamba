@@ -12,6 +12,11 @@
     <!-- gallery -->
 	<div class="gallery">
 		<div class="container">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
 			<div class="gallery-grids">
                 @foreach ($videos as $video)
 
@@ -28,7 +33,7 @@
 				</div>
 
                 @endforeach
-	
+
 				<div class="clearfix"> </div>
 			</div>
 		</div>

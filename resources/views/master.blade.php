@@ -10,6 +10,12 @@
 <meta name="keywords" content="Harvest Life Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+<link
+        href="{{asset('logo.jpg')}}"
+        id="favicon"
+        rel="icon"
+    >
 <!-- bootstrap-css -->
 <link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
@@ -111,8 +117,9 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 				</div>
 				<div class="col-md-3 w3-agile-footer-grid">
 					<h3>Newsletter</h3>
-					<form action="#" method="post">
-						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Entrez votre adress email" required="">
+					<form action="{{route('newsletter.submit')}}" method="post">
+                        @csrf
+						<input type="email" id="mc4wp_email" name="email" placeholder="Entrez votre adress email" required="">
 						<input type="submit" value="Souscrire">
 					</form>
 				</div>

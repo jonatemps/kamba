@@ -1,0 +1,12 @@
+{
+    "ignore": {
+        "laravel-vite-plugin": {
+            "versions": "0.6.0",
+            "reason": ""
+        },
+        "lodash": {
+            "versions": "4.17.21",
+            "reason": ""
+        }
+    }
+}

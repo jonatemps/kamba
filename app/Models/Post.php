@@ -13,9 +13,16 @@ class Post extends Model
 {
     use HasFactory,AsSource, Filterable, Attachable;
 
+    // protected $with = ['user'];
+
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
     }
 
     public function formatDate()
@@ -23,4 +30,6 @@ class Post extends Model
         $date = $this->created_at;
         return Carbon::parse($date)->diffForHumans();
     }
+
+
 }
