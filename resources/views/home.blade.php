@@ -90,10 +90,10 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						<div class="w3layouts-banner-top">
 							<div class="container">
 								<div class="agileits-banner-info">
-									<h3>Ensemble combattons la faim !{{-- <span>Nulla massa magna</span> --}}</h3>
-									<p>Nous nous attendons à ce que par nos activités le panier de consommation du congolais moyen augmente du jour au jour jusqu'à un niveau acceptable.</p>
+									<h3>{{__("Ensemble combattons la faim !")}}{{-- <span>Nulla massa magna</span> --}}</h3>
+									<p>{{__("Nous nous attendons à ce que par nos activités le panier de consommation du congolais moyen augmente du jour au jour jusqu'à un niveau acceptable.")}}</p>
 									<div class="w3-button">
-										<a href="about">Plus</a>
+										<a href="about">{{__("Plus")}}</a>
 									</div>
 								</div>
 							</div>
@@ -103,10 +103,10 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						<div class="w3layouts-banner-top w3layouts-banner-top1">
 							<div class="container">
 								<div class="agileits-banner-info">
-									<h3>Ensemble combattons les antis valeurs !{{-- <span>Ut molestie lectus</span> --}}</h3>
-									<p>Le constat est qu’il y a une accumulation de maux et une perte considerable des valeurs humaines, ancestrales et chrétiennes d’équité, de justice, d’honnêteté, de loyauté, de pudeur, cèdent la place aux antivaleurs de corruption, d’incivisme, de déviances sexuelles, d’impunité, etc.</p>
+									<h3>{{__("Ensemble combattons les antis valeurs !")}}{{-- <span>Ut molestie lectus</span> --}}</h3>
+									<p>{{__("Le constat est qu’il y a une accumulation de maux et une perte considerable des valeurs humaines, ancestrales et chrétiennes d’équité, de justice, d’honnêteté, de loyauté, de pudeur, cèdent la place aux antivaleurs de corruption, d’incivisme, de déviances sexuelles, d’impunité, etc.")}}</p>
 									<div class="w3-button">
-										<a href="about">Plus</a>
+										<a href="about">{{__("Plus")}}</a>
 									</div>
 								</div>
 							</div>
@@ -116,10 +116,10 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 						<div class="w3layouts-banner-top w3layouts-banner-top2">
 							<div class="container">
 								<div class="agileits-banner-info">
-									<h3>Ensemble nous y arriverons !{{-- <span>pulvinar hendrerit</span> --}}</h3>
-									<p>Toutes nos batteries en marche pour contribuer à l’émergence de notre cher et beaux pays la RDC à travers nos axes d’activités qui favorisent l’autonomisation et l’intégration des congolais.</p>
+									<h3>{{__("Ensemble nous y arriverons !")}}{{-- <span>pulvinar hendrerit</span> --}}</h3>
+									<p>{{__("Toutes nos batteries en marche pour contribuer à l’émergence de notre cher et beaux pays la RDC à travers nos axes d’activités qui favorisent l’autonomisation et l’intégration des congolais.")}}</p>
 									<div class="w3-button">
-										<a href="about">Plus</a>
+										<a href="about">{{__("Plus")}}</a>
 									</div>
 								</div>
 							</div>
@@ -164,12 +164,17 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	<!-- welcome -->
 	<div class="welcome">
 		<div class="container">
+            @if(Session::has('success'))
+                <div class="alert alert-success">
+                    {{ Session::get('success') }}
+                </div>
+            @endif
 			<div class="w3-welcome-grids">
 				<div class="col-md-5 w3l-welcome-left">
-					<h2>Bienvenu à la<span>fondation Kamba</span></h2>
-					<p>Nous nous préoccupons de l’amélioration de la qualité de vie du congolais moyen par nos activités. Nous nous engageons à en faire une réalité.</p>
+					<h2>{{__("Bienvenu à la")}}<span>{{__("fondation Kamba")}}</span></h2>
+					<p>{{__("Nous nous préoccupons de l’amélioration de la qualité de vie du congolais moyen par nos activités. Nous nous engageons à en faire une réalité.")}}</p>
                     <div class="w3ls-button">
-						<a href="about">Plus</a>
+						<a href="about">{{__("Plus")}}</a>
 					</div>
 				</div>
 				<div class="col-md-7 w3l-welcome-right">
@@ -193,36 +198,32 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	<!-- services -->
 	<div class="services">
 		<div class="container">
-            @if(Session::has('success'))
-                <div class="alert alert-success">
-                    {{ Session::get('success') }}
-                </div>
-            @endif
+
 			<div class="agileits-services-grids">
 				<div class="col-md-4 agileinfo-services-left">
-					<h3>Nos <span>Activités</span></h3>
-					<p>Pour l'amélioration de la qualité de vie du congolais, la Fondation KAMBA propose ces axes d'activités pour opérer de réels changements dans la vie des gens..</p>
+					<h3>{{__("Nos")}} <span>{{__("Activités")}}</span></h3>
+					<p>{{__("Pour l'amélioration de la qualité de vie du congolais, la Fondation KAMBA propose ces axes d'activités pour opérer de réels changements dans la vie des gens.")}}</p>
 				</div>
 				<div class="col-md-8 agileinfo-services-right">
 					<div class="col-md-6 w3-agileits-services-grid">
 						<i class="fa fa-envira" aria-hidden="true"></i>
-						<h4>Promotion de l'agriculture</h4>
-						<p>Le premier objectif vise à améliorer la productivité et à augmenter la production. Cela implique une meilleure utilisation des ressources et une diversification de la production sans investissements lourds.</p>
+						<h4>{{__("Promotion de l'agriculture")}}</h4>
+						<p>{{__("Le premier objectif vise à améliorer la productivité et à augmenter la production. Cela implique une meilleure utilisation des ressources et une diversification de la production sans investissements lourds.")}}</p>
 					</div>
                     <div class="col-md-6 w3-agileits-services-grid">
 						<i class="fa fa-plane" aria-hidden="true"></i>
-						<h4>Favoriser l'émencipation de la femme</h4>
-						<p>Un ensemble d'activités qui consiste à affranchir la femme des liens, des entraves, de l'état de dépendance, de domination ainsi que des préjugés dans le but de creer un elle de l'estime de soi et de l'autonomie. </p>
+						<h4>{{__("Favoriser l'émencipation de la femme")}}</h4>
+						<p>{{__("Un ensemble d'activités qui consiste à affranchir la femme des liens, des entraves, de l'état de dépendance, de domination ainsi que des préjugés dans le but de creer un elle de l'estime de soi et de l'autonomie.")}} </p>
 					</div>
 					<div class="col-md-6 w3-agileits-services-grid agile-services1">
 						<i class="fa fa-font" aria-hidden="true"></i>
-						<h4>Réduction d'analphabétisation</h4>
-						<p>Encourager l'apprentissage de la lecture. Via l'enseignement des bases de lecture et d'écriture, cette méthode permet d'inclure également l'apprentissage social et culturel.</p>
+						<h4>{{__("Réduction d'analphabétisation")}}</h4>
+						<p>{{__("Encourager l'apprentissage de la lecture. Via l'enseignement des bases de lecture et d'écriture, cette méthode permet d'inclure également l'apprentissage social et culturel.")}}</p>
 					</div>
 					<div class="col-md-6 w3-agileits-services-grid">
 						<i class="fa fa-lock" aria-hidden="true"></i>
-						<h4>Lutter contre le désœuvrement et anti valeurs de la jeunesse</h4>
-						<p>La lutte contre le désœuvrement et la délinquance des jeunes constitue le thème permanent dʹun véritable socle dʹobjectifs de l'association Kamba.</p>
+						<h4>{{__("Lutter contre le désœuvrement et anti valeurs de la jeunesse")}}</h4>
+						<p>{{__("La lutte contre le désœuvrement et la délinquance des jeunes constitue le thème permanent dʹun véritable socle dʹobjectifs de l'association Kamba.")}}</p>
 					</div>
 					{{-- <div class="col-md-6 w3-agileits-services-grid ">
 						<i class="fa fa-plane" aria-hidden="true"></i>
@@ -272,53 +273,16 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 	</div>
 	<!-- //news -->
 	<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="agile-footer-grids">
-				<div class="col-md-3 w3-agile-footer-grid">
-					<h3>A propos</h3>
-					<p>Déterminé à jouer un rôle de premier plan et de mettre notre intelligence au service de la nation congolaise en vue de promouvoir son développement.</p>
-				</div>
-				{{-- <div class="col-md-3 w3-agile-footer-grid">
-					<h3>Evénements</h3>
-					<ul>
-						<li>12th Aug <a href="single.html">Curabitur</a></li>
-						<li>10th Sept <a href="single.html">Fusce urna</a></li>
-						<li>24th Sept <a href="single.html">Praesent</a></li>
-						<li>17th Oct <a href="single.html">Malesuada </a></li>
-						<li>09th Dec <a href="single.html">Cum sociis</a></li>
-					</ul>
-				</div> --}}
-				<div class="col-md-3 w3-agile-footer-grid">
-					<h3>Navigation</h3>
-					<ul>
-						<li class="text"><a href="{{route('about')}}">A propos</a></li>
-						<li class="text"><a href="{{route('gallery.images')}}">Gallery</a></li>
-						<li class="text"><a href="{{route('posts')}}">Blog</a></li>
-						<li class="text"><a href="{{route('contact')}}">Contact</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 w3-agile-footer-grid">
-					<h3>Newsletter</h3>
-					<form action="" method="post">
-                        @csrf
-						<input type="email" id="mc4wp_email" name="EMAIL" placeholder="Entrez votre adresse email" required="">
-						<input type="submit" value="Souscrir">
-					</form>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
+	@include('partials.footer')
 	<!-- //footer -->
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
             <p class="small m-n">
                 © Copyright {{date('Y')}} <a href="mailto:mupene7@gmail.com" target="_blank">"Fondation Kamba"</a><br>
-                Propulsé Par  <a href="mailto:mupene7@gmail.com" target="_blank">"Jonathan Mupene"</a>
+                {{__("Propulsé Par")}}  <a href="mailto:mupene7@gmail.com" target="_blank">"Jonathan Mupene"</a>
             </p>
-            <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p>
+            {{-- <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p> --}}
 		</div>
 	</div>
 	<!-- //copyright -->

@@ -16,29 +16,34 @@
         <div class="agile-contact-form">
             <div class="col-md-6 contact-form-left">
                 <div class="w3layouts-contact-form-top">
-                    <h3>Contactez-nous</h3>
-                    <p>Retrouvez tous les moyens de rentrer en contact avec la Fondation KAMBA sur cette page. Nous sommes et resterons ouvert à toutes sollicitations.</p>
+                    <h3>{{__("Contactez-nous")}}</h3>
+                    <p>{{__("Retrouvez tous les moyens de rentrer en contact avec la Fondation KAMBA sur cette page. Nous sommes et resterons ouvert à toutes sollicitations.")}}</p>
                 </div>
                 <div class="agileits-contact-address">
                     <ul>
-                        <li><i class="fa fa-phone" aria-hidden="true"></i> <span>+1 234 567 8901</span></li>
-                        <li><i class="fa fa-phone fa-envelope" aria-hidden="true"></i> <span><a href="mailto:example@email.com">mail@example.com</a></span></li>
-                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Eiusmod Tempor inclore Place,Kingsport 56777.</span></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i> <span>+243 895 193 650</span></li>
+                        <li><i class="fa fa-phone fa-envelope" aria-hidden="true"></i> <span><a href="mailto:info@fondationkamba.orgm">info@fondationkamba.org</a></span></li>
+                        {{-- <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Eiusmod Tempor inclore Place,Kingsport 56777.</span></li> --}}
+                        <li><i class="fa fa-whatsapp" aria-hidden="true"></i> <span>+243 819 873 249</span></li>
+                        <li><i class="fa fa-facebook" aria-hidden="true"></i> <span><a href="https://web.facebook.com/fondationkamba71">fondationkamba71</a></span></li>
+                        <li><i class="fa fa-twitter" aria-hidden="true"></i> <span><a href="https://twitter.com/FondationKamba">fondationkamba71</a></span></li>
+                        <li><i class="fa fa-youtube-play" aria-hidden="true"></i> <span><a href="https://www.youtube.com/channel/UCsZPcGqLgxZ01RIpYDezLDQ">fondationkamba71</a></span></li>
+                        <li><i class="fa fa-instagram" aria-hidden="true"></i> <span><a href="https://www.youtube.com/channel/UCsZPcGqLgxZ01RIpYDezLDQ">fondationkamba71</a></span></li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-6 contact-form-right">
                 <div class="contact-form-top">
-                    <h3>Envoyez-nous un message</h3>
+                    <h3>{{__("Envoyez-nous un message")}}</h3>
                 </div>
                 <div class="agileinfo-contact-form-grid">
                     <form action="{{route('contact.submit')}}" method="post">
                         @csrf
-                        <input type="text" name="name" placeholder="Nom" required="">
-                        <input type="email" name="email" placeholder="Email" required="">
-                        <input type="text" name="phone" placeholder="Téléphone" required="">
+                        <input type="text" name="name" placeholder="{{__("Nom")}}" required="">
+                        <input type="email" name="email" placeholder="{{__("Email")}}" required="">
+                        <input type="text" name="phone" placeholder="{{__("Téléphone")}}" required="">
                         <textarea name="Message" placeholder="message" required=""></textarea>
-                        <button class="btn1">Envoyer</button>
+                        <button class="btn1">{{__("Envoyer")}}</button>
                     </form>
                 </div>
             </div>

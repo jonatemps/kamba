@@ -89,53 +89,16 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
     @yield('content')
 
 	<!-- footer -->
-	<div class="footer">
-		<div class="container">
-			<div class="agile-footer-grids">
-				<div class="col-md-3 w3-agile-footer-grid">
-					<h3>A propos</h3>
-					<p>Déterminé à jouer un rôle de premier plan et de mettre notre intelligence au service de la nation congolaise en vue de promouvoir son développement.</p>
-				</div>
-				{{-- <div class="col-md-3 w3-agile-footer-grid">
-					<h3>Evénements</h3>
-					<ul>
-						<li>12th Aug <a href="">Curabitur</a></li>
-						<li>10th Sept <a href="">Fusce urna</a></li>
-						<li>24th Sept <a href="">Praesent</a></li>
-						<li>17th Oct <a href="">Malesuada </a></li>
-						<li>09th Dec <a href="">Cum sociis</a></li>
-					</ul>
-				</div> --}}
-				<div class="col-md-3 w3-agile-footer-grid">
-					<h3>Navigation</h3>
-					<ul>
-						<li class="text"><a href="about">A propos</a></li>
-						<li class="text"><a href="gallery">Gallery</a></li>
-						<li class="text"><a href="posts">Blog</a></li>
-						<li class="text"><a href="contact">Contact</a></li>
-					</ul>
-				</div>
-				<div class="col-md-3 w3-agile-footer-grid">
-					<h3>Newsletter</h3>
-					<form action="{{route('newsletter.submit')}}" method="post">
-                        @csrf
-						<input type="email" id="mc4wp_email" name="email" placeholder="Entrez votre adress email" required="">
-						<input type="submit" value="Souscrire">
-					</form>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
+	@include('partials.footer')
 	<!-- //footer -->
 	<!-- copyright -->
 	<div class="copyright">
 		<div class="container">
             <p class="small m-n">
-                © Copyright {{date('Y')}} <a href="mailto:mupene7@gmail.com" target="_blank">"Fondation Kamba"</a><br>
-                Propulsé Par  <a href="mailto:mupene7@gmail.com" target="_blank">"Jonathan Mupene"</a>
+                © Copyright {{date('Y')}} <a href="mailto:info@fondationkamba.org" target="_blank">"Fondation Kamba"</a><br>
+                {{__("Propulsé Par")}}  <a href="mailto:mupene7@gmail.com" target="_blank">"Jonathan Mupene"</a>
             </p>
-			<p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p>
+			{{-- <p><a target="_blank" href="https://www.templateshub.net">Templates Hub</a> </p> --}}
 		</div>
 	</div>
 	<!-- //copyright -->

@@ -34,11 +34,11 @@
                         <div class="blog-left-right">
                             <div class="blog-left-right-top">
                                 <h4><a href="{{route('post',$post->id)}}">{{$post->title}}</a></h4>
-                                <p>Posté Par <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="#">Commentaires ({{$post->comments->count()}})</a></p>
+                                <p>{{__("Posté Par")}} <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="#">Commentaires ({{$post->comments->count()}})</a></p>
                             </div>
                             <div class="blog-left-right-bottom">
                                 <p>{!! nl2br(substr($post->content,0,150)) !!}</p>
-                                <a href="{{route('post',$post->id)}}">Plus</a>
+                                <a href="{{route('post',$post->id)}}">{{__("Plus")}}</a>
                             </div>
                         </div>
                         <div class="clearfix"> </div>
@@ -75,7 +75,7 @@
             </div>
             <div class="col-md-4 agile-blog-grid-right">
                 <div class="categories">
-                    <h3>Récents</h3>
+                    <h3>{{__("Récents")}}</h3>
                     <ul>
 
                         @foreach ($posts as $post)
@@ -83,7 +83,7 @@
                         @endforeach
                     </ul>
                 </div>
-                <div class="categories">
+                {{-- <div class="categories">
                     <h3>Archive</h3>
                     <ul class="marked-list offs1">
                         <li><a href="#">May 2016 (7)</a></li>
@@ -97,7 +97,7 @@
                         <li><a href="#">September 2016 (8)</a></li>
                         <li><a href="#">August 2016 (6)</a></li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
             <div class="clearfix"> </div>
         </div>

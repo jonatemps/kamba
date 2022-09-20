@@ -6,7 +6,7 @@
 
     <div class="about-heading">
         <div class="container">
-            <h2>Gallery Vidéos</h2>
+            <h2>{{__("Gallérie")}} {{__("Vidéos")}}</h2>
         </div>
     </div>
     <!-- gallery -->

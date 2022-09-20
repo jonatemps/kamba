@@ -7,7 +7,7 @@
 
 <div class="about-heading">
     <div class="container">
-        <h2>Blog Article</h2>
+        <h2>{{__("Unique Article")}}</h2>
     </div>
 </div>
 <!-- blog -->
@@ -31,7 +31,7 @@
                         <div class="blog-left-right">
                             <div class="blog-left-right-top">
                                 <h4>{{$post->title}}</h4>
-                                <p>Posté Par <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="">Commentaires ({{$post->comments->count()}})</a></p>
+                                <p>{{__("Posté Par")}} <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="">Commentaires ({{$post->comments->count()}})</a></p>
                             </div>
                             <div class="blog-left-right-bottom">
                                 {!! nl2br($post->content) !!}
@@ -42,7 +42,7 @@
                     <!---728x90--->
 
                     <div class="response">
-                            <h3>Commentaire</h3>
+                            <h3>{{__("Commentaire")}}</h3>
                             @foreach ($post->comments as $comment)
                                 <div class="media response-info">
                                     <div class="media-left response-text-left">
@@ -100,20 +100,20 @@
                     <!---728x90--->
 
                     <div class="opinion">
-                        <h3>Déposez votre commentaire</h3>
+                        <h3>{{__("Déposez votre commentaire")}}</h3>
                         <form action="{{route('comment.send',[$post->id])}}" method="post">
                             @csrf
-                            <input type="text" name="name" placeholder="Nom" required="">
+                            <input type="text" name="name" placeholder="{{__("Nom")}}" required="">
                             <input type="email" name="email" placeholder="Email" required="">
                             <textarea name="content" placeholder="Message" required=""></textarea>
-                            <input type="submit" value="Soumettre">
+                            <input type="submit" value="{{__("Envoyer")}}">
                         </form>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 agile-blog-grid-right">
                 <div class="categories">
-                    <h3>Récents</h3>
+                    <h3>{{__("Récents")}}</h3>
                     <ul>
 
                         @foreach ($posts as $post)

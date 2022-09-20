@@ -227,7 +227,20 @@ ul.dropdown-menu li{
 	color: #333;
     text-align: center;
 }
-.agileinfo-social-grids ul li a i.fa.fa-facebook{
+
+
+.agileinfo-social-grids ul li a i.fa.fa-youtube-play {
+    color: #FFFFFF;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+.agileinfo-social-grids ul li a i.fa.fa-youtube-play:hover {
+    color: #d11515;
+}
+.agileinfo-social-grids ul li a i.fa.fa-facebook {
     color: #FFFFFF;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
@@ -264,7 +277,7 @@ ul.dropdown-menu li{
 	color: #55acee;
 }
 
-.agileinfo-social-grids ul li a i.fa.fa-google{
+.agileinfo-social-grids ul li a i.fa.fa-envelope{
 	margin:0 1em 0 0;
     color: #FFFFFF;
     transition: 0.5s all;
@@ -273,7 +286,7 @@ ul.dropdown-menu li{
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
-.agileinfo-social-grids ul li a i.fa.fa-google:hover{
+.agileinfo-social-grids ul li a i.fa.fa-envelope:hover{
 	color: #f26522;
 }
 .agileinfo-social-grids ul li a i.fa.fa-vk{
@@ -754,7 +767,7 @@ ul.dropdown-menu li{
 /*-- //copyright --*/
 /*-- about-banner --*/
 .about-banner{
-	background: url(../images/2.jpg) no-repeat 0px 0px;
+	background: url(../images/fruit-noir.jpg) no-repeat 0px 0px;
     background-size: cover;
     position: inherit;
     padding: 0 0 2em 0;
@@ -1776,7 +1789,7 @@ i.fa.fa-pencil{
     display: block;
     margin: 1em 0;
 }
-.agileits-contact-address ul li i.fa.fa-phone,.agileits-contact-address ul li i.fa.fa-map-marker {
+.agileits-contact-address ul li i.fa.fa-phone,.agileits-contact-address ul li i.fa.fa-map-marker,.agileits-contact-address ul li i.fa.fa-facebook,.agileits-contact-address ul li i.fa.fa-whatsapp,.agileits-contact-address ul li i.fa.fa-twitter,.agileits-contact-address ul li i.fa.fa-youtube-play,.agileits-contact-address ul li i.fa.fa-instagram {
     height: 40px;
     width: 40px;
     background: #b3bf06;
@@ -2117,6 +2130,7 @@ button.btn1:hover{
 @media(max-width:480px){
 	.welcome, .services, .news, .codes, .gallery, .blog, .contact {
 		padding: 2em 0;
+        padding-bottom: 4cm;
 	}
 	.w3l-welcome-right-img1 {
 		left: 80px;
@@ -2182,7 +2196,7 @@ button.btn1:hover{
 		font-size: 1.3em;
 	}
 	.header-right {
-		margin: 1em 0 0 0;
+		margin: -1em 0 0 0;
 	}
 	.agileits-banner-info {
 		padding: 9em 0 3em;
