@@ -10,7 +10,7 @@ class PostController extends Controller
 {
 
     public function list(){
-        $posts = Post::orderBy('created_at','desc')->paginate(2);
+        $posts = Post::orderBy('created_at','desc')->paginate(3);
 
 
         return view('posts',['posts' => $posts]);

@@ -17,13 +17,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         rel="icon"
     >
 <!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{asset('css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
 <!--// bootstrap-css -->
 <!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="{{asset('css/style.css')}}" type="text/css" media="all" />
 <!--// css -->
 <!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet">
+<link href="{{asset('css/font-awesome.css')}}" rel="stylesheet">
 <!-- //font-awesome icons -->
 <!-- font -->
 <link href="http://fonts.googleapis.com/css?family=Playball&amp;subset=latin-ext" rel="stylesheet">
@@ -202,7 +202,7 @@ ga('create', 'UA-30027142-1', 'w3layouts.com');
 			<div class="agileits-services-grids">
 				<div class="col-md-4 agileinfo-services-left">
 					<h3>{{__("Nos")}} <span>{{__("Activités")}}</span></h3>
-					<p>{{__("Pour l'amélioration de la qualité de vie du congolais, la Fondation KAMBA propose ces axes d'activités pour opérer de réels changements dans la vie des gens.")}}</p>
+					<p>{{__("Pour l'amélioration de la qualité de vie du congolais, la Fondation KAMBA propose ces axes d'activités afin d'opérer de réels changements dans la vie des gens.")}}</p>
 				</div>
 				<div class="col-md-8 agileinfo-services-right">
 					<div class="col-md-6 w3-agileits-services-grid">

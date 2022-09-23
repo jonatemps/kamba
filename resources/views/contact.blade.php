@@ -23,7 +23,7 @@
                     <ul>
                         <li><i class="fa fa-phone" aria-hidden="true"></i> <span>+243 895 193 650</span></li>
                         <li><i class="fa fa-phone fa-envelope" aria-hidden="true"></i> <span><a href="mailto:info@fondationkamba.orgm">info@fondationkamba.org</a></span></li>
-                        {{-- <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span>Eiusmod Tempor inclore Place,Kingsport 56777.</span></li> --}}
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i> <span>12, avenu Biangala, Quartier Salongo, Commune de Lemba</span></li>
                         <li><i class="fa fa-whatsapp" aria-hidden="true"></i> <span>+243 819 873 249</span></li>
                         <li><i class="fa fa-facebook" aria-hidden="true"></i> <span><a href="https://web.facebook.com/fondationkamba71">fondationkamba71</a></span></li>
                         <li><i class="fa fa-twitter" aria-hidden="true"></i> <span><a href="https://twitter.com/FondationKamba">fondationkamba71</a></span></li>

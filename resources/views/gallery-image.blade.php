@@ -37,7 +37,11 @@
                 @endforeach
 
 			</div>
+
 		</div>
+        <div class="d-flex justify-content-center text-center">
+            {!! $images->links() !!}
+        </div>
 	</div>
 	<!-- //gallery -->
 	<!---728x90--->

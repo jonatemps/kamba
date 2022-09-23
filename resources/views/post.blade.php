@@ -22,7 +22,7 @@
             <div class="col-md-8 agile-blog-grid-left">
                 <div class="agile-blog-grid">
                     <div class="agile-blog-grid-left-img">
-                        <a href="single.html"><img src="images/g5.jpg" alt="" /></a>
+                        <a href="{{route('post',$post->id)}}"><img src="{{$post->image}}" alt="" /></a>
                     </div>
                     <div class="blog-left-grids">
                         <div class="blog-left-left">

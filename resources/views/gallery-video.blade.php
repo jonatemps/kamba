@@ -23,10 +23,10 @@
                 <div class="col-md-6 gallery-grid">
 					<div class="grid">
 						<figure class="effect-roxy">
-							<iframe width="500" height="320" src="https://www.youtube.com/embed/lcZDWo6hiuI"> </iframe>
+							<iframe width="500" height="320" src="{{$video->link}}"> </iframe>
 								<figcaption>
-									<h3>Maecenas <span>lacusddddddddd</span></h3>
-									<p> Aenean fermentum nisl ac imperdiet commodo</p>
+									<h3>{{$video->title}} </h3>
+									<p> {{$video->description}}</p>
 								</figcaption>
 						</figure>
 					</div>
@@ -34,9 +34,14 @@
 
                 @endforeach
 
+
 				<div class="clearfix"> </div>
+                <div class="d-flex justify-content-center text-center">
+                    {!! $videos->links() !!}
+                </div>
 			</div>
 		</div>
+
 	</div>
 	<!-- //gallery -->
 	<!---728x90--->

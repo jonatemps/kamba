@@ -34,7 +34,7 @@
                         <div class="blog-left-right">
                             <div class="blog-left-right-top">
                                 <h4><a href="{{route('post',$post->id)}}">{{$post->title}}</a></h4>
-                                <p>{{__("Posté Par")}} <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="#">Commentaires ({{$post->comments->count()}})</a></p>
+                                <p>{{__("Posté Par")}} <a href="#">{{$post->user->name}}</a> &nbsp;&nbsp; {{$post->formatDate()}} &nbsp;&nbsp; <a href="#">Commentaires ({{$post->comments->count() }})</a></p>
                             </div>
                             <div class="blog-left-right-bottom">
                                 <p>{!! nl2br(substr($post->content,0,150)) !!}</p>
@@ -69,7 +69,7 @@
                         {!! $posts->links() !!}
                     </ul>
                 </nav> --}}
-                <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center text-center">
                     {!! $posts->links() !!}
                 </div>
             </div>
