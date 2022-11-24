@@ -70,7 +70,7 @@
                                 <li><a class="{{$active4 ?? ''}}" href="{{route('posts')}}">Blog</a></li>
                                 <li><a class="list-border1 {{$active5 ?? ''}}" href="{{route('contact')}}">Contact</a></li>
 
-                                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom {{$active3 ?? ''}}" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{__("Langue")}}<span class="caret"></span></a>
+                                <li class=""><a href="#" class="dropdown-toggle hvr-bounce-to-bottom" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{__("Langue")}}<span class="caret"></span></a>
                                     <ul class="dropdown-menu">
                                         <li><a class="hvr-bounce-to-bottom" href="{{route('setlang','fr')}}">{{__("Francais")}}</a></li>
                                         <li><a class="hvr-bounce-to-bottom" href="{{route('setlang','en')}}">{{__("Anglais")}}</a></li>

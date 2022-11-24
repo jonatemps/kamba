@@ -22,13 +22,17 @@
 
                 <div class="col-md-6 gallery-grid">
 					<div class="grid">
-						<figure class="effect-roxy">
+						{{-- <figure class="effect-roxy">
 							<iframe width="500" height="320" src="{{$video->link}}"> </iframe>
 								<figcaption>
 									<h3>{{$video->title}} </h3>
 									<p> {{$video->description}}</p>
 								</figcaption>
-						</figure>
+						</figure> --}}
+                        <h3>{{substr($video->title,0,37)}} </h3>
+                        <div class="embed-responsive embed-responsive-16by9 effect-roxy " >
+                            {!!$video->link!!}
+                        </div>
 					</div>
 				</div>
 
